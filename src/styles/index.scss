@@ -11,3 +11,42 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+
+.outerBox {
+
+object-position: center;
+background: black;
+height: 300px;
+width: 120px;
+padding: 10px;
+
+}
+
+.redL {
+    background: red;
+    height:80px;
+    widows: 80px;
+    margin: 10px;
+}
+
+.redLoff {
+    background: gray;
+    height:80px;
+    widows: 80px;
+    margin: 10px;
+}
+
+.greenL {
+    background: green;
+    height:80px;
+    widows: 80px;
+    margin: 10px;
+}
+
+.amberL {
+    background: orange;
+    height:80px;
+    widows: 80px;
+    margin: 10px;
+}
