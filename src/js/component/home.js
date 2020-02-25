@@ -9,17 +9,63 @@ export function Home() {
 	const [amberL, setamberL] = useState("amberL");
 	const [greenL, setgreenL] = useState("greenL");
 
+	function redUp() {
+		if (redL == "redL") {
+			setredL("redLoff");
+			setamberL("amberL");
+			setgreenL("redLoff");
+		} else {
+			setredL("redL");
+			setgreenL("redLoff");
+			setamberL("redLoff");
+		}
+	}
+
+	function amberUp() {
+		if (amberL == "amberL") {
+			setamberL("redLoff");
+			setredL("redLoff");
+			setgreenL("greenL");
+		} else {
+			setamberL("amberL");
+			setredL("redLoff");
+			setgreenL("redLoff");
+		}
+	}
+
+	function greenUp() {
+		if (greenL == "greenL") {
+			setgreenL("redLoff");
+			setamberL("redLoff");
+			setredL("redL");
+		} else {
+			setgreenL("greenL");
+			setredL("redLoff");
+			setamberL("redLoff");
+		}
+	}
+
 	return (
 		<div className="outerBox">
 			<div
 				className={redL}
-				onClick={redL == "redL" ? setredL("redLoff") : setredL("redL")}>
+				onClick={() => {
+					redUp();
+				}}>
 				R
 			</div>
-			<div className={amberL} onClick={() => setamberL("redLoff")}>
+			<div
+				className={amberL}
+				onClick={() => {
+					amberUp();
+				}}>
 				A
 			</div>
-			<div className={greenL} onClick={() => setgreenL("redLoff")}>
+			<div
+				className={greenL}
+				onClick={() => {
+					greenUp();
+				}}>
 				G
 			</div>
 		</div>
